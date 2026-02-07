@@ -126,12 +126,6 @@ WEBHOOK_URLS = {
 }
 ```
 
-##  Tests
-
-Fichier de tests disponible pour vérifier les gestionnaires :
-```bash
-python test_managers.py
-```
 
 ## Licence
 
