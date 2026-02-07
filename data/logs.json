@@ -1,0 +1,8 @@
+[
+    {
+        "timestamp": "2026-01-23 21:17:43",
+        "typeAlert": "IPban try to SYN",
+        "srcIP": "192.168.1.66",
+        "ports": 3024
+    }
+]
