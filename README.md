@@ -133,9 +133,21 @@ Fichier de tests disponible pour vérifier les gestionnaires :
 python test_managers.py
 ```
 
-##  Licence
+## Licence
 
-Projet académique - Libre d'utilisation
+Ce projet est distribué sous la licence **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+
+Vous êtes libre de :
+- Utiliser le logiciel à des fins personnelles ou commerciales
+- Modifier le code source
+- Distribuer des copies
+
+**Conditions** :
+- Si vous utilisez ce logiciel sur un serveur réseau, vous **devez** fournir le code source aux utilisateurs
+- Toute modification doit être distribuée sous la même licence AGPL-3.0
+- Vous devez inclure l'avis de copyright et la licence
+
+Voir le fichier [LICENSE](LICENSE) pour les détails complets.
 
 ## Auteur
 
