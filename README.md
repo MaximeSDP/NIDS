@@ -112,6 +112,9 @@ NIDS/
 ├── data/               # Fichiers JSON (logs, blacklist)
 │   ├── logs.json
 │   └── blacklist.json
+├── Images/             # Assets pour le README
+│   ├── gif1.gif
+│   └── gif2.gif
 ├── main.py             # Point d'entrée du NIDS
 ├── attack_sim.py       # Simulateur d'attaques
 ├── test_managers.py    # Tests unitaires
