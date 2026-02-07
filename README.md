@@ -2,6 +2,16 @@
 
 Système de détection d'intrusion réseau avec interface web interactive développé en Python.
 
+## Démo
+
+### Simulation d'attaque
+![Lancement d'une attaque simulée](Images/gif1.gif)
+*Démonstration du lancement d'une attaque SYN/PING simulée et détection en temps réel*
+
+### Visualisation des résultats
+![Consultation des logs et statistiques](Images/gif2.gif)
+*Navigation dans les logs, la blacklist et les graphiques de statistiques*
+
 ## Description
 
 NIDS est un système de détection d'intrusion qui analyse le trafic réseau en temps réel pour identifier les menaces potentielles. Il détecte notamment :
