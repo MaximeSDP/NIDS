@@ -111,14 +111,6 @@ NIDS/
 ├── nids.err            # Erreurs du NIDS (généré)
 └── README.md           # Documentation
 ```
-│   ├── blacklistManager.py
-│   └── discordManager.py
-├── memory/             # Compteurs d'activité IP
-├── data/               # Fichiers JSON (logs, blacklist)
-├── main.py             # Point d'entrée du NIDS
-├── attack_sim.py       # Simulateur d'attaques
-└── requirements.txt    # Dépendances Python
-```
 
 ## Configuration
 
