@@ -7,6 +7,8 @@ class BlacklistManager(JsonManager):
     @staticmethod
     def add(ip, reason):
         data = JsonManager._load(BlacklistManager.NAME_FILE)
+        if not isinstance(data, dict):
+            data = {}
         date_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
         # Structure : {ip : [raison, date]}
@@ -32,3 +34,8 @@ class BlacklistManager(JsonManager):
             return True
         else:
             return False
+
+    @staticmethod
+    def clear():
+        """Clear all blacklisted IPs"""
+        return JsonManager._save(BlacklistManager.NAME_FILE, {})

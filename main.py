@@ -6,8 +6,12 @@ def get_best_interface():
     return conf.route.route("8.8.8.8")[0]
 
 def analyse_paquet(paquet):
-    for current_strategy in strategies:
-        current_strategy.analyse(paquet)
+    try:
+        print("test")
+        for current_strategy in strategies:
+            current_strategy.analyse(paquet)
+    except Exception as e:
+        print("ignore")
 
 active_iface = get_best_interface()
 print(f"Interface sélectionnée automatiquement : {active_iface}")

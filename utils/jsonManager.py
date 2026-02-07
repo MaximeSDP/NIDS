@@ -31,3 +31,8 @@ class JsonManager:
         except IOError as e:
             print(f"Error saving to {FILE_PATH}: {e}")
             return False
+
+    @staticmethod
+    def _clear(nameFile):
+        """Clear all data from the JSON file (set to empty list)"""
+        return JsonManager._save(nameFile, {})

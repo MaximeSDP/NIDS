@@ -15,6 +15,8 @@ from utils.logsManager import LogsManager
 
 def getJsonLogs():
     logs = LogsManager._load(LogsManager.NAME_FILE)
+    if not isinstance(logs, list):
+        return []
     return logs
 
 def getJsonBlacklist():
@@ -141,7 +143,7 @@ if menuSelection == "accueil" :
             st.session_state.launch = False
             st.rerun()
             
-        if st.button("Lancer simulation attaque SYN"):
+        if st.button("Lancer simulation attaque SYN/PING"):
             attack_script = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'attack_sim.py'))
             try:
                 with st.spinner('Attaque en cours...'):
@@ -157,9 +159,23 @@ if menuSelection == "accueil" :
 
 
 elif menuSelection == "Fichier logs":
+    col1, col2 = st.columns([4, 1])
+    with col2:
+        if st.button("🗑️ Clear Logs", type="secondary"):
+            LogsManager.clear()
+            st.success("Logs effacés !")
+            st.rerun()
+    
     updateJsonPannel(getJsonLogs())
 
 elif menuSelection == "Fichier BanIP":
+    col1, col2 = st.columns([4, 1])
+    with col2:
+        if st.button("🗑️ Clear Blacklist", type="secondary"):
+            BlacklistManager.clear()
+            st.success("Blacklist effacée !")
+            st.rerun()
+    
     blacklistData = getJsonBlacklist()
     if blacklistData:
         df = pd.DataFrame.from_dict(blacklistData, orient='index', columns=['Raison', 'Date'])
@@ -178,4 +194,4 @@ elif menuSelection == "Graphique":
         title="Origines des types d'attaques",
         color_discrete_sequence=px.colors.sequential.RdBu
     )
-    st.plotly_chart(fig, use_container_width=True) 
+    st.plotly_chart(fig, width='stretch') 

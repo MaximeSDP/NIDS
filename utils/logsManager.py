@@ -6,6 +6,7 @@ class LogsManager(JsonManager):
     NAME_FILE = "../data/logs.json"
     @staticmethod
     def add(typeAlert,srcIP,targetport):
+        print(f"add {srcIP}")
         data = JsonManager._load(LogsManager.NAME_FILE)
         if not isinstance(data, list):
             data = []
@@ -39,4 +40,9 @@ class LogsManager(JsonManager):
                 print(f"[Logs] Aucun log trouvé pour l'IP {srcIP}.")
         else:
             print(f"[Logs] Le fichier de logs est vide ou invalide.")
+
+    @staticmethod
+    def clear():
+        """Clear all logs"""
+        return JsonManager._clear(LogsManager.NAME_FILE)
 
